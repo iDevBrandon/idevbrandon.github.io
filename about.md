@@ -2,14 +2,15 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
 
-Some information about you!
+How to reach me!
 
-### More Information
+### business
 
-A place to include any other types of information that you'd like to include about yourself.
+Drop an email below and i will back to you ASAP!
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[idevbrandon@gmail.com](mailto:idevbrandon@gmail.com)
