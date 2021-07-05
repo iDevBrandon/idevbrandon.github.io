@@ -1,10 +1,5 @@
 
 
-
-
-The main Projects
-===============
-
 ---
 
 **DividendDB**
