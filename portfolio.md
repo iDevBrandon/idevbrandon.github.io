@@ -1,6 +1,6 @@
 
 
----
+
 
 **DividendDB**
 
@@ -21,4 +21,4 @@ Used stack : Next.JS, GraphQL
 
 
 
----
+
