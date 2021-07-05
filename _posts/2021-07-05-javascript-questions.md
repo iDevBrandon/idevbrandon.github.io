@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## Must know these
 
@@ -17,8 +17,4 @@ published: false
 
 7. Scope
 
-8. How browser renders 
-
-
-
-
+8. How browser renders
