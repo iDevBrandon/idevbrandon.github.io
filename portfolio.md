@@ -1,4 +1,4 @@
-## More Projects
+More Projects
 
 As i am passinated in Investment & LBS web applications, i've been develpoing these. 
 
