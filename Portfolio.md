@@ -1,19 +1,23 @@
 
 
-### My main projects
+## My main projects
 
 
 As i am passinated in investment and LBS fields, i'd been upgrading these 2 projects. 
 
 
-**DividendDB**
+### **DividendDB**
 
 Enter text in [Demo](http://dividend.vercel.app). Use the toolbar above, or click the **?** button for formatting help.
 
-Used stack : React, Redux, Styled-components
+Used stack : React, Redux, Styled-components.
 
 
-**OXINION**
+
+
+
+
+### **OXINION**
 A location-based web service to share your opinions locally
 
 Used stack : Next.JS, GraphQL
