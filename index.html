@@ -15,9 +15,8 @@ published: true
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
-  {% endfor %}
   
-    <!-- Pagination links -->
+  <!-- Pagination links -->
     <div class="pagination">
        {% assign maxPageNum = paginator.total_pages %} {% assign class
       ='unactive' %} {% assign currentPage = paginator.page %} {% for i in
@@ -32,4 +31,7 @@ published: true
       >
       {% endif %} {% endfor %}
     </div>
+  {% endfor %}
+  
+    
 </div>
