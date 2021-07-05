@@ -18,3 +18,7 @@ Used stack : React, Redux, Styled-components
 A location-based web service to share your opinions locally
 
 Used stack : Next.JS, GraphQL
+
+
+
+---
