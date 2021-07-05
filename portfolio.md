@@ -1,7 +1,5 @@
 More Projects
 
-As i am passinated in Investment & LBS web applications, i've been develpoing these. 
-
 
 **DividendDB**
 ![dividenddb_logo.png]({{site.baseurl}}/dividenddb_logo.png)
