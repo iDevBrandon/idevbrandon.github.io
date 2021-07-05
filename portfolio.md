@@ -4,6 +4,7 @@ As i am passinated in Investment & LBS web applications, i've been develpoing th
 
 
 **DividendDB**
+![dividenddb_logo.png]({{site.baseurl}}/dividenddb_logo.png)
 
 Enter text in [Demo](http://dividend.vercel.app). Use the toolbar above, or click the **?** button for formatting help.
 
