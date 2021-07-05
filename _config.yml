@@ -76,7 +76,6 @@ sass:
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  - jekyll-pagination
   
 	paginate: 3 # 한 페이지 당 표시하고자 하는 포스트의 최대 개수
 	paginate_path: "/page:num/" # URL 규칙
