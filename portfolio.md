@@ -1,11 +1,7 @@
 
-Some information about you!
 
-### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
+### More Projects
 
 
 As i am passinated in investment and LBS fields, i'd keep upgrading these 2 projects. 
@@ -19,6 +15,7 @@ Used stack : React, Redux, Styled-components
 
 
 **OXINION**
+
 A location-based web service to share your opinions locally
 
 Used stack : Next.JS, GraphQL
