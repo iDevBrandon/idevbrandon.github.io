@@ -1,4 +1,7 @@
-More Projects
+## The main Projects
+
+---
+
 
 
 **DividendDB**
@@ -7,6 +10,9 @@ More Projects
 Enter text in [Demo](http://dividend.vercel.app). Use the toolbar above, or click the **?** button for formatting help.
 
 Used stack : React, Redux, Styled-components
+
+---
+
 
 
 **OXINION**
