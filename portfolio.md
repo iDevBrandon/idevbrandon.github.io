@@ -1,7 +1,5 @@
 
-## 
 
-Projects i'm working on
 
 
 As i am passinated in investment and LBS fields, i'd keep upgrading these 2 projects. 
