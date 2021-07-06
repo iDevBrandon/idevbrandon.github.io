@@ -47,11 +47,37 @@ const store = createStore(component)
 <img width="228" alt="Screen Shot 2021-07-06 at 5 53 55 PM" src="https://user-images.githubusercontent.com/40842018/124572074-4f73c000-de83-11eb-87cf-6d047499cb4c.png">
 
 
+---
 
 
 
 
+// Action -> Describe your status. ex) i'm hungry, but not the action of buying a burger. 
 
+// Initial state & Reducer 
+
+// Store -> Global state
+
+
+// To create container component
+Container component is a component that is connected with Redux store.
+
+Apply to the component with connect()
+
+```JavaScript
+const makeContainer = connect(mapStateToProps, mapDispatchToProps)
+makeContainer(target component)
+
+```
+
+How to visualize it 
+```
+ const store = createStore(
+   reducer, /* preloadedState, */
++  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+ );
+
+```
 
 
 
@@ -79,29 +105,7 @@ const CHANGE_INPUT = 'todos/CHANGE_INPUT';
 
 
 
-// Action -> Describe your status. ex) i'm hungry, but not the action of buying a burger. 
 
-// Initial state & Reducer 
-
-// Store -> Global state
-
-
-// Apply to the component with connect()
-
-```JavaScript
-const makeContainer = connect(mapStateToProps, mapDispatchToProps)
-makeContainer(target component)
-
-```
-
-How to visualize it 
-```
- const store = createStore(
-   reducer, /* preloadedState, */
-+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
- );
-
-```
 
 [React-Redux official website](https://react-redux.js.org/)
 
