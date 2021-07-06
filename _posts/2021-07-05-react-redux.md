@@ -58,7 +58,30 @@ subscribe() : subscribe() will automaticlaly called whenever action is dispatche
 store.subscribe(() => console.log("State after dispatch:", store.getState()));
 ```
 
+in class component, we had to use connect() to connect with store. In functional component, we can use useSelector(). It allows you extract the data from the redux store. useSelector() is going to return the current state.
 
+we use useDispatch() hook to dispatch an action
+
+
+```
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+
+const Vehicle = () => {
+  const counter = useSelector((state) => state);
+  const dispatch = useDispatch();
+  return (
+    <div>
+      <button onClick={() => dispatch({ type: "CAR" })}>Car</button>
+      <h1>{counter.vehicle}</h1>
+      <button onClick={() => dispatch({ type: "BIKE" })}>Bike</button>
+    </div>
+  );
+};
+
+export default Vehicle;
+
+```
 
 
 // Action -> Describe your status. ex) i'm hungry, but not the action of buying a burger. 
