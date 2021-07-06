@@ -49,6 +49,15 @@ const store = createStore(component)
 
 ---
 
+### store action 
+Let's find out store methods 
+getState() : To get the current state of store. 
+
+subscribe() : subscribe() will automaticlaly called whenever action is dispatched. 
+```
+store.subscribe(() => console.log("State after dispatch:", store.getState()));
+```
+
 
 
 
