@@ -44,6 +44,7 @@ const store = createStore(component)
 
 ---
 ## Folder structure 
+<img width="228" alt="Screen Shot 2021-07-06 at 5 53 55 PM" src="https://user-images.githubusercontent.com/40842018/124572074-4f73c000-de83-11eb-87cf-6d047499cb4c.png">
 
 
 
