@@ -7,9 +7,11 @@ published: true
 
 
 
-## **💵 DividendDB [Live Version](https://dividenddb.vercel.app)**
+## **💵 DividendDB**
 
-[</>Github Code](https://github.com/idevbrandon/dividenddb)
+
+
+[🌐 Live Version](https://dividenddb.vercel.app) & [💻Github Code](https://github.com/idevbrandon/dividenddb)
 
 
 
@@ -29,10 +31,18 @@ Techologies used:
 
 
 
-## **🗺️ OXINION [Live Version](https://oxinion.com)**
+## **🗺️ OXINION**
 
-# [</>Github Code](https://github.com/idevbrandon/oxinion)
+[🌐 Live Version](https://oxinion.com) & [💻Github Code](https://github.com/idevbrandon/oxinion)
 
 A location-based web service to share your opinions locally.
 
-Used stack : Next.JS, GraphQL
+ 
+Techologies used:
+
+- Next.JS
+- React(including Hooks)
+- Redux 
+- GraphQL
+- TypeScript
+- Styled-components, 
