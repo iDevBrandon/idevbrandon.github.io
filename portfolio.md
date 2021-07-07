@@ -7,23 +7,33 @@ published: true
 
 
 
-**DividendDB**
+**💵 DividendDB [Live Preview](https://dividenddb.vercel.app)**
+
+[Code](https://github.com/idevbrandon/dividenddb)
+
+
 
 A dividend tool to maximize your dividend income.
-[Demo](http://dividend.vercel.app)
 
-Used stack : React, Redux, Styled-components, TypeScript
+
+Techologies used:
+
+- React(including Hooks)
+- Redux 
+- TypeScript
+- Styled-components, 
 
 ---
 
 
 
-**OXINION**
+**🗺️ OXINION [Live Preview](https://oxinion.com)**
+
+[Code](https://github.com/idevbrandon/oxinion)
 
 A location-based web service to share your opinions locally.
 
 Used stack : Next.JS, GraphQL
 
 
-
-
+ 
