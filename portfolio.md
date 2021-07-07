@@ -9,7 +9,7 @@ published: true
 
 ## **💵 DividendDB [Live Version](https://dividenddb.vercel.app)**
 
-# [</>Github Code](https://github.com/idevbrandon/dividenddb)
+[<Github Code/>](https://github.com/idevbrandon/dividenddb)
 
 
 
@@ -22,6 +22,8 @@ Techologies used:
 - Redux 
 - TypeScript
 - Styled-components, 
+
+
 
 ---
 
