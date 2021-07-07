@@ -121,8 +121,24 @@ How to visualize it
 
 ```
 
+## To create a container component by using Hooks
 
+- useSelector
 
+```JavaScript
+const result = useSelector(selected function);
+
+const number = useSelector(state => state.counter.number);
+
+```
+
+- useDispatch : dispatch an action by using useDispatch
+
+```JavaScript
+const dispatch = useDispatch();
+dispatch({ type: 'SAMPLE_ACTION' })
+
+```
 
 
 
