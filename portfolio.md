@@ -7,9 +7,9 @@ published: true
 
 
 
-**💵 DividendDB [Live Preview](https://dividenddb.vercel.app)**
+**💵 DividendDB [Live Version](https://dividenddb.vercel.app)**
 
-[Code](https://github.com/idevbrandon/dividenddb)
+[Github Code](https://github.com/idevbrandon/dividenddb)
 
 
 
@@ -27,9 +27,9 @@ Techologies used:
 
 
 
-**🗺️ OXINION [Live Preview](https://oxinion.com)**
+**🗺️ OXINION [Live Version](https://oxinion.com)**
 
-[Code](https://github.com/idevbrandon/oxinion)
+[Github Code](https://github.com/idevbrandon/oxinion)
 
 A location-based web service to share your opinions locally.
 
