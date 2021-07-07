@@ -88,7 +88,17 @@ export default Vehicle;
 
 // Initial state & Reducer 
 
-// Store -> Global state
+### Store -> Global state
+```JavaScript
+import { createStore } from "redux";
+import reducer from "../reducer/vehicle";
+
+const store = createStore(reducer);
+
+export default store;
+
+
+```
 
 
 // To create container component
@@ -113,27 +123,10 @@ How to visualize it
 
 
 
----
 
 
-## Project time - Create To-Do list with React-Redux
-
-```
-
-npx create-react-app todo-redux
-
-yarn add redux react-redux
 
 
-```
-
-### 1.1.1 todos module
-
-```JavaScript
-const CHANGE_INPUT = 'todos/CHANGE_INPUT';
-
-
-```
 
 
 
