@@ -13,7 +13,7 @@ published: true
 
 [🌐 Live Version](https://dividenddb.vercel.app) & [💻Github Code](https://github.com/idevbrandon/dividenddb)
 
-
+[DividendDB API on marketplace](https://rapidapi.com/iDevBrandon/api/dividenddb/)
 
 A dividend tool to maximize your dividend income.
 
@@ -45,4 +45,4 @@ Techologies used:
 - Redux 
 - GraphQL
 - TypeScript
-- Styled-components, 
+- Styled-components,
