@@ -61,4 +61,11 @@ JavaScript is a high-level language. Developer does not have to manage the memor
 JS is a language with first class functions, functions are simply treated as variables. 
 <img width="882" alt="Screen Shot 2021-07-12 at 4 38 34 AM" src="https://user-images.githubusercontent.com/40842018/125208046-2a3fe100-e2cb-11eb-9488-65201a175b4c.png">
 
+javascript engine always contains call stack and heap. 
+
+
+
+
+
+
 
