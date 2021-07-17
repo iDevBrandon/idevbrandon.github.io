@@ -8,8 +8,7 @@ published: true
 
 
 
-# 👨🏻‍🎓 Education
-Majored in "Computing for Business" at Aston Univeristy, UK. 
+
 
 ## 👨‍💻 Projects
 
@@ -33,9 +32,6 @@ Techologies used:
 
 
 
----
-
-
 
 ### **🗺️ OXINION**
 
@@ -51,4 +47,17 @@ Techologies used:
 - Redux 
 - GraphQL
 - TypeScript
-- Styled-components,
+- Styled-components
+
+---
+
+## 👨🏻‍🎓 Education
+Majored in "Computing for Business" at Aston Univeristy, UK. 
+
+---
+
+
+## 🏋️‍♂️ Other Acitivities
+Investment
+
+(YouTube)[https://www.youtube.com/channel/UCJkWGHm1S2XgpYh_zTueQEQ]
