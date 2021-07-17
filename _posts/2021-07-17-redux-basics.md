@@ -11,6 +11,7 @@ A state management system for cross components or app-wide state.
 ## Core redux concept 
 
 One central data (Store)
+![ReduxCoreConcept](https://user-images.githubusercontent.com/40842018/126022974-95c3b4af-09ae-40df-bf3c-ad69aef72611.png)
 
 
 
