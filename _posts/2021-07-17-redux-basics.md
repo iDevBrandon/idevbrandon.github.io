@@ -13,9 +13,19 @@ A state management system for cross components or app-wide state.
 One central data (Store)
 ![ReduxCoreConcept](https://user-images.githubusercontent.com/40842018/126022974-95c3b4af-09ae-40df-bf3c-ad69aef72611.png)
 
-Reducer is the only method that can handle data changes. 
+* Redux uses a "one-way data flow" app structure
 
-Component dispatchs an action
+When something happens in the app:
+	
+    The UI dispatches an action.
+
+	The store runs the reducers, and the state is updated based on what occurred.
+
+	The store notifies the UI that the state has changed.
+
+The UI re-renders based on the new state.
+
+ 
 
 ## Commonly asked question 
 
