@@ -6,8 +6,10 @@ published: true
 ---
 
 
+# 🧑 About me
+I would like to create valuable service that makes better world with my code. 
 
-
+---
 
 
 ## 👨‍💻 Projects
@@ -53,6 +55,39 @@ Techologies used:
 
 ## 👨🏻‍🎓 Education
 Majored in "Computing for Business" at Aston Univeristy, UK. 
+
+---
+
+## 🔗 Links.
+
+
+## **[GitHub](https://github.com/idevbrandon)**
+
+- **Personal , I have so much business ideas that i haven't implemented YET!**
+
+## **[Blog](https://idevbrandon.medium.com)**
+
+Mainly Medium due to SEO, 
+Upload my study activity in Blogger
+- **Study Notes, I post the general topics such as dev, PS and Investment**
+
+---
+
+## 🛠️ SKills
+Frontend
+JavaScript/TypeScript
+React/Redux/Next.js
+
+Backend
+MongoDB
+
+DevOps
+AWS(ES2, S3, Route53)
+
+---
+
+## 👨🏻‍💼 Work Experience
+[Will add my future companies list ️‍🔥 Sadly, still unemployed 😢(But i can do it!)]
 
 ---
 
