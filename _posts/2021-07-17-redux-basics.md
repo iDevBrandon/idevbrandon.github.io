@@ -5,12 +5,12 @@ published: true
 
 
 ## What is Redux?
-
 A state management system for cross components or app-wide state. 
 
 
+## Core redux concept 
 
-
+One central data (Store)
 
 
 
