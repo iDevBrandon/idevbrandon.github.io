@@ -10,8 +10,8 @@ A state management system for cross components or app-wide state.
 
 ## Core redux concept 
 
-One central data (Store)
-![ReduxCoreConcept](https://user-images.githubusercontent.com/40842018/126022974-95c3b4af-09ae-40df-bf3c-ad69aef72611.png)
+![215578349_4118975204886921_157891935550937689_n.jpeg]({{site.baseurl}}/_posts/215578349_4118975204886921_157891935550937689_n.jpeg)
+
 
 * Redux uses a "one-way data flow" app structure
 
