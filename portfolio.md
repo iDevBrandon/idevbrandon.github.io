@@ -7,7 +7,13 @@ published: true
 
 
 
-## **💵 DividendDB**
+
+# 👨🏻‍🎓 Education
+Majored in "Computing for Business" at Aston Univeristy, UK. 
+
+## 👨‍💻 Projects
+
+### **💵 DividendDB**
 
 
 
@@ -31,7 +37,7 @@ Techologies used:
 
 
 
-## **🗺️ OXINION**
+### **🗺️ OXINION**
 
 [🌐 Live Version](https://oxinion.com) & [💻Github Code](https://github.com/idevbrandon/oxinion)
 
