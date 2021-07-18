@@ -26,15 +26,11 @@ import { createSlice } from "@reduxjs/toolkit";
 
 ### 2. Adding a slice 
 
-      keep all the state which we're not editing & overwrite in an immutable way.
-      
-      event if we have immutable code here, Redux toolkit internally uses package "immer".
-      
-      automatically clone the state to avoid mutating the original state.
-      
-      but still good practice not to mutate the state.
-      
-      In toolkit, we can change the only state which is in our interest.
+keep all the state which we're not editing & overwrite in an immutable way.
+Even if we have immutable code here, Redux toolkit internally uses package "immer".
+Automatically clone the state to avoid mutating the original state.
+but still good practice not to mutate the state.
+In toolkit, we can change the only state which is in our interest.
 
 
 ```JavaScript
