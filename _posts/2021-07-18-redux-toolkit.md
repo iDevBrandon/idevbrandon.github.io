@@ -81,5 +81,13 @@ change to like this :
   const incrementHandler = () => {
     dispatch(counterActions.increment());
   };
+  
+### 5. Working with multiple slices.
+
+We still have to stick with only one redux store
+
+const store = configureStore({
+  reducer: { counter: counterSlice, auth: authSlice },
+});
 
 Offical page(https://redux-toolkit.js.org/)
