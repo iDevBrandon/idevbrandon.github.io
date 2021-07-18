@@ -59,6 +59,16 @@ createSlice({
 
 3. Connecting Redux Toolkit state
 
+import configureStore from toolkit package, instead of store from redux
+
+```JavaScript
+// it makes merging multiple reducers
+const store = configureStore({
+  reducer: {
+    counter: counterSlice.reducer,
+  },
+});
+```
 
 
 Offical page(https://redux-toolkit.js.org/)
