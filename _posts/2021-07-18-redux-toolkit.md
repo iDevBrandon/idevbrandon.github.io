@@ -15,14 +15,14 @@ Solution for these is Redux Toolkit.
 > yarn add @reduxjs/toolkit
 
 
-1. Create slide 
+### 1.Create slide 
 
 ```JavaScript
 import { createSlice } from "@reduxjs/toolkit";
 
 ```
 
-2. Adding a slice 
+### 2. Adding a slice 
 
       keep all the state which we're not editing & overwrite in an immutable way.
       
