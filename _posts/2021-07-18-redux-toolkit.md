@@ -68,10 +68,9 @@ import configureStore from toolkit package, instead of store from redux
 ```JavaScript
 // it makes merging multiple reducers
 const store = configureStore({
-  reducer: {
-    counter: counterSlice.reducer,
-  },
+  reducer: counterSlice.reducer,
 });
+ 
 ```
 
 ---
