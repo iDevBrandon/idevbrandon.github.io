@@ -87,7 +87,8 @@ change to like this :
 We still have to stick with only one redux store
 
 const store = configureStore({
-  reducer: { counter: counterSlice, auth: authSlice },
+  reducer: { counter: counterSlice.reducer, auth: authSlice.reducer },
 });
+
 
 Offical page(https://redux-toolkit.js.org/)
