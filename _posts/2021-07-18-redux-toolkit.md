@@ -57,7 +57,7 @@ createSlice({
 
 ```
 
-3. Connecting Redux Toolkit state
+### 3. Connecting Redux Toolkit state
 
 import configureStore from toolkit package, instead of store from redux
 
@@ -70,7 +70,7 @@ const store = configureStore({
 });
 ```
 
-4. Merging all together 
+### 4. Merging all together 
 after export the actions, 
 export const counterActions = counterSlice.actions;
 
