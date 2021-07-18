@@ -12,4 +12,15 @@ We might end up with a bigger state objects that leads to complex setup like an 
 Solution for these is Redux Toolkit. 
 
 
+> yarn add @reduxjs/toolkit
+
+
+1. Create slide 
+
+```JavaScript
+import { createSlice } from "@reduxjs/toolkit";
+
+```
+
+
 Offical page(https://redux-toolkit.js.org/)
