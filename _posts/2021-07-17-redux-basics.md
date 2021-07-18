@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-# Redux basics
+# Redux series (1)
 
 
 ## What is Redux?
