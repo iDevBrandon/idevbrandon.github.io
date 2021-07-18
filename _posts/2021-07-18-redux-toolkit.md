@@ -70,5 +70,15 @@ const store = configureStore({
 });
 ```
 
+4. Merging all together 
+after export the actions, 
+export const counterActions = counterSlice.actions;
+
+in a component, we can import { counterActions } from "../store/index";
+
+change to like this :
+  const incrementHandler = () => {
+    dispatch(counterActions.increment());
+  };
 
 Offical page(https://redux-toolkit.js.org/)
