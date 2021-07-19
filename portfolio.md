@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Portfolio
+title: resume
 permalink: /portfolio/
 published: true
 ---
