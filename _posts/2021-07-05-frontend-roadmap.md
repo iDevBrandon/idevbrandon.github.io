@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-## React JS Roadmap
+## FE Roadmap
 
 ### Starter 
 Basics | Forms | Hooks + Context 
