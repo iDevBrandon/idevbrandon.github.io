@@ -16,9 +16,9 @@ Gatsby | Next JS | React Native
 
 ## FE Roadmap 
 
-|            Subject           | 1 | 2 | 3 | 4 |
-|------------------------------|---|---|---|---|
-| Core JavaScript & Algorithm  |  Fetch | a  | b  |  c |
+|            Subject           | 1       | 2       | 3       | 4       |
+|------------------------------|---------|---------|---------|---------|
+| Core JavaScript & Algorithm  |  Fetch  | this,prototype, oop  | EC  |  hosting |
 | Assignment  |  Todo with Calandar |
 |  React fundamental | CRA structure, state,props, map etc..  | React: Functional/Class components
 | Assignment  |  Implement Pokemon Card List |
