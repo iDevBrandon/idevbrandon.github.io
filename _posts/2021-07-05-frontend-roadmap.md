@@ -17,7 +17,7 @@ Gatsby | Next JS | React Native
 ## FE Roadmap 
 
 |      Subject      | Must-know    |Elementary   |Intermediate  |Advanced    |
-|-------------------|-----------------|----------------|---------------|-------------|
+|-------------------|--------------|-------------|--------------|------------|
 | Core JavaScript   | this,prototype, oop| fetch  | EC  |  hosting |
 | Algorithm         | stack, queue, sorting algo  |
 | Assignment        |  Todo with Calandar |
