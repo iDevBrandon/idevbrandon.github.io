@@ -20,9 +20,9 @@ Gatsby | Next JS | React Native
 |------------------------------|---------|---------|---------|---------|
 | Core JavaScript              | this,prototype, oop| fetch  | EC  |  hosting |
 | Algorithm                    | stack, queue, sorting algo  |
-| Assignment  |  Todo with Calandar |
+| Assignment                   |  Todo with Calandar |
 |  React fundamental | CRA structure, state,props, map etc..  | React: Functional/Class components
-| Assignment  |  Implement Pokemon Card List |
+| Assignment                   |  Implement Pokemon Card List |
 |  React Hooks |React Context | Event,Axios  |
 |  React alpha |  Redux, Redux-Saga, Redux-toolkit |   |   |   |
 |  Extra | SEO, Webpack,Babel, AWS S3, CLoudFront  | Nodejs & Express  | TypeScript  | SCSS  | 
