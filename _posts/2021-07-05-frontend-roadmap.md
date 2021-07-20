@@ -16,7 +16,7 @@ Gatsby | Next JS | React Native
 
 ## FE Roadmap 
 
-| Subject                      | 1 | 2 | 3 | 4 |
+|            Subject           | 1 | 2 | 3 | 4 |
 |------------------------------|---|---|---|---|
 | Core JavaScript & Algorithm  |  Fetch |   |   |   |
 | Assignment  |  Todo with Calandar |   |   |   |
