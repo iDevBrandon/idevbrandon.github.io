@@ -18,9 +18,9 @@ Gatsby | Next JS | React Native
 
 |            Subject           | 1 | 2 | 3 | 4 |
 |------------------------------|---|---|---|---|
-| Core JavaScript & Algorithm  |  Fetch |   |   |   |
+| Core JavaScript & Algorithm  |  Fetch | a  | b  |  c |
 ---
-| Assignment  |  Todo with Calandar |   |   |   |
+| Assignment  |  Todo with Calandar | a  |  b |  c |
 ---
 |  React fundamental | CRA structure, state,props, map etc..  | React: Functional/Class components  |  React Hooks | Event,Axios  |
 |  React alpha |  Redux, Redux-Saga, Redux-toolkit |   |   |   |
