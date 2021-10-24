@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## 이벤트 위임에 대해 설명하세요.
 
