@@ -21,6 +21,9 @@ document.querySelector('#child-5').addEventListener('click', printId);
 document.querySelector('#child-6').addEventListener('click', printId);
 ```
 
+
+
+
 ```JavaScript
 document.getElementById('parent').addEventListener('click', function (e) {
 	if (e.target && e.target.nodeName == 'LI') {
