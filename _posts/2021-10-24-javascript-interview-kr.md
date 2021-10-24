@@ -34,4 +34,8 @@ document.getElementById('parent').addEventListener('click', function (e) {
 - 리스너는 DOM의 event bubbling으로 인해 하위 요소에서 이벤트가 발생될 때마다 실행되고, 부모 element로 전파되어 document 레벨까지 도달하게 된다.
 - 각 하위 항목에 이벤트를 연결하지 않고, 상위 하나의 단일 핸들러만 만들엇기에, 메모리 사용공간도 줄어든다.
 
+### this가 JavaScript에서 어떻게 작동하는지 설명하세요.
+this의 값은 호출 되는 방식에 따라 달라집니다.
+
+
 
