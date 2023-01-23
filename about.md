@@ -5,9 +5,8 @@ permalink: /about/
 published: true
 ---
 
-- Always wanna be a super star in IT & Investment industry 
-- Future WLD chamipon 
-
+- Always wanna be a super star in IT & Investment industry
+- Future WLD chamipon
 
 ### How to reach me! & business contact
 
