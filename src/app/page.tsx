@@ -72,17 +72,18 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               <Card>
                 <CardHeader>
-                  <CardTitle>Project One</CardTitle>
-                  <CardDescription>A modern web application</CardDescription>
+                  <CardTitle>Oxinion</CardTitle>
+                  <CardDescription>Advanced trading and analytics platform</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">
-                    Description of your project and what technologies were used.
+                    Comprehensive trading platform with real-time market data, advanced charting, and portfolio management capabilities.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <Badge variant="secondary">React</Badge>
                     <Badge variant="secondary">TypeScript</Badge>
                     <Badge variant="secondary">Node.js</Badge>
+                    <Badge variant="secondary">WebSocket</Badge>
                   </div>
                   <Button variant="outline" size="sm">View Project</Button>
                 </CardContent>
@@ -90,17 +91,18 @@ export default function Home() {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Project Two</CardTitle>
-                  <CardDescription>Another amazing project</CardDescription>
+                  <CardTitle>Oxinion Finance</CardTitle>
+                  <CardDescription>Financial data and research platform</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">
-                    Description of your second project and its key features.
+                    Financial research platform providing market insights, company analysis, and investment tools for informed decision making.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <Badge variant="secondary">Next.js</Badge>
                     <Badge variant="secondary">Tailwind</Badge>
                     <Badge variant="secondary">PostgreSQL</Badge>
+                    <Badge variant="secondary">API Integration</Badge>
                   </div>
                   <Button variant="outline" size="sm">View Project</Button>
                 </CardContent>
@@ -108,17 +110,18 @@ export default function Home() {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Project Three</CardTitle>
-                  <CardDescription>Yet another cool project</CardDescription>
+                  <CardTitle>OMX</CardTitle>
+                  <CardDescription>Options market exchange platform</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">
-                    Description of your third project and what makes it special.
+                    Options trading platform with advanced order management, risk analytics, and real-time market data for professional traders.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge variant="secondary">Vue.js</Badge>
+                    <Badge variant="secondary">React</Badge>
                     <Badge variant="secondary">Python</Badge>
                     <Badge variant="secondary">MongoDB</Badge>
+                    <Badge variant="secondary">Trading APIs</Badge>
                   </div>
                   <Button variant="outline" size="sm">View Project</Button>
                 </CardContent>
