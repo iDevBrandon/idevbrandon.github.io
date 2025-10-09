@@ -45,37 +45,37 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --background: #0a192f;
+  --foreground: #ccd6f6;
+  --card: #112240;
+  --card-foreground: #e6f1ff;
+  --popover: #112240;
+  --popover-foreground: #e6f1ff;
+  --primary: #64ffda;
+  --primary-foreground: #0a192f;
+  --secondary: #233554;
+  --secondary-foreground: #ccd6f6;
+  --muted: #1a2332;
+  --muted-foreground: #8892b0;
+  --accent: #64ffda;
+  --accent-foreground: #0a192f;
+  --destructive: #ff6b6b;
+  --border: #233554;
+  --input: #233554;
+  --ring: #64ffda;
+  --chart-1: #64ffda;
+  --chart-2: #ffd700;
+  --chart-3: #ff6b6b;
+  --chart-4: #a8dadc;
+  --chart-5: #f1faee;
+  --sidebar: #112240;
+  --sidebar-foreground: #ccd6f6;
+  --sidebar-primary: #64ffda;
+  --sidebar-primary-foreground: #0a192f;
+  --sidebar-accent: #233554;
+  --sidebar-accent-foreground: #ccd6f6;
+  --sidebar-border: #233554;
+  --sidebar-ring: #64ffda;
 }
 
 .dark {
@@ -118,5 +118,15 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+    font-weight: 600;
   }
 }
