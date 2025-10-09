@@ -21,8 +21,8 @@ export default function Home() {
                 <AvatarFallback>BR</AvatarFallback>
               </Avatar>
               <div>
-                <h1 className="text-2xl font-bold">Brandon</h1>
-                <p className="text-muted-foreground">Full Stack Developer</p>
+                <h1 className="text-2xl font-bold">Brandon Ha (Seongyeon Ha)</h1>
+                <p className="text-muted-foreground">Frontend developer • Building OXINION</p>
               </div>
             </div>
             <nav className="hidden md:flex space-x-6">
@@ -59,7 +59,7 @@ export default function Home() {
         <section className="py-20 text-center">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              Hi, I&apos;m <span className="text-primary">Brandon</span>
+              Hi, I&apos;m <span className="text-primary">Brandon Ha</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               A passionate full-stack developer who loves creating beautiful and
@@ -82,9 +82,9 @@ export default function Home() {
             <div className="max-w-3xl mx-auto">
               <Card>
                 <CardHeader>
-                  <CardTitle>Full Stack Developer</CardTitle>
+                  <CardTitle>Frontend Developer</CardTitle>
                   <CardDescription>
-                    Building digital experiences with modern technologies
+                    Building OXINION • Creating innovative trading platforms
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
