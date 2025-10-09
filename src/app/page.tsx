@@ -39,8 +39,12 @@ export default function Home() {
               A passionate full-stack developer who loves creating beautiful and functional web applications.
             </p>
             <div className="flex gap-4 justify-center">
-              <Button size="lg">View My Work</Button>
-              <Button variant="outline" size="lg">Contact Me</Button>
+              <Button size="lg" asChild>
+                <a href="#projects">View My Work</a>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <a href="#contact">Contact Me</a>
+              </Button>
             </div>
           </div>
         </section>
@@ -172,10 +176,19 @@ export default function Home() {
                 I&apos;m always interested in new opportunities and interesting projects. 
                 Feel free to reach out if you&apos;d like to work together!
               </p>
-              <div className="flex gap-4 justify-center">
-                <Button>Email Me</Button>
-                <Button variant="outline">LinkedIn</Button>
-                <Button variant="outline">GitHub</Button>
+              <div className="flex gap-4 justify-center flex-wrap">
+                <Button asChild>
+                  <a href="mailto:contact@idevbrandon.com">Email Me</a>
+                </Button>
+                <Button variant="outline" asChild>
+                  <a href="https://www.linkedin.com/in/idevbrandon/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </Button>
+                <Button variant="outline" asChild>
+                  <a href="https://docs.google.com/document/d/1-pB9W-ymRE7-5bB9gLD0gdCks9MBg_qq860wHlN9gYU/edit?tab=t.0#heading=h.2l6shjehg56f" target="_blank" rel="noopener noreferrer">View CV</a>
+                </Button>
+                <Button variant="outline" asChild>
+                  <a href="https://github.com/iDevBrandon" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </Button>
               </div>
             </div>
           </div>
