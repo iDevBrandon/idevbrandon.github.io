@@ -33,7 +33,7 @@ export default function Home() {
         <section className="py-20 text-center">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              Hi, I'm <span className="text-primary">Brandon</span>
+              Hi, I&apos;m <span className="text-primary">Brandon</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               A passionate full-stack developer who loves creating beautiful and functional web applications.
@@ -56,7 +56,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">
-                    I'm a dedicated developer with a passion for creating innovative web solutions. 
+                    I&apos;m a dedicated developer with a passion for creating innovative web solutions. 
                     With experience in both frontend and backend development, I enjoy working with 
                     modern technologies to build scalable and user-friendly applications.
                   </p>
@@ -166,8 +166,8 @@ export default function Home() {
             <h3 className="text-3xl font-bold text-center mb-12">Get In Touch</h3>
             <div className="max-w-2xl mx-auto text-center">
               <p className="text-muted-foreground mb-8">
-                I'm always interested in new opportunities and interesting projects. 
-                Feel free to reach out if you'd like to work together!
+                I&apos;m always interested in new opportunities and interesting projects. 
+                Feel free to reach out if you&apos;d like to work together!
               </p>
               <div className="flex gap-4 justify-center">
                 <Button>Email Me</Button>
