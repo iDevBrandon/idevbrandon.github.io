@@ -168,7 +168,9 @@ export default function Home() {
                     </span>
                   </div>
                   <div className="text-gray-600 space-y-1">
-                    <p className="mb-2">Developed DApp called &quot;Suhosin&quot;</p>
+                    <p className="mb-2">
+                      Developed DApp called &quot;Suhosin&quot;
+                    </p>
                     <ul className="space-y-1 list-disc list-inside">
                       <li>
                         Developed DApp Suhosin NFTs with Caver.js and IPFS and
@@ -238,7 +240,7 @@ export default function Home() {
               <div className="flex gap-6">
                 <div className="shrink-0 w-20">
                   <span className="text-gray-500 text-sm whitespace-nowrap">
-                    Ongoing
+                    Present
                   </span>
                 </div>
                 <div className="flex-1">
@@ -298,12 +300,31 @@ export default function Home() {
               <div className="flex gap-6">
                 <div className="shrink-0 w-20">
                   <span className="text-gray-500 text-sm whitespace-nowrap">
-                    Ongoing
+                    Present
                   </span>
                 </div>
                 <div className="flex-1">
                   <div className="mb-1">
-                    <span className="text-gray-900">💰 Oxinion Finance</span>
+                    <a
+                      href="https://finance.oxinion.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-900 hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                    >
+                      💰 Oxinion Finance
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        className="text-gray-400"
+                      >
+                        <path
+                          d="M3.5 3C3.22386 3 3 3.22386 3 3.5C3 3.77614 3.22386 4 3.5 4V3ZM8.5 3.5H9C9 3.22386 8.77614 3 8.5 3V3.5ZM8 8.5C8 8.77614 8.22386 9 8.5 9C8.77614 9 9 8.77614 9 8.5H8ZM2.64645 8.64645C2.45118 8.84171 2.45118 9.15829 2.64645 9.35355C2.84171 9.54882 3.15829 9.54882 3.35355 9.35355L2.64645 8.64645ZM3.5 4H8.5V3H3.5V4ZM8 3.5V8.5H9V3.5H8ZM8.14645 3.14645L2.64645 8.64645L3.35355 9.35355L8.85355 3.85355L8.14645 3.14645Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </a>
                   </div>
                   <div className="text-gray-600 space-y-1">
                     <p className="mb-2">
@@ -334,14 +355,31 @@ export default function Home() {
               <div className="flex gap-6">
                 <div className="shrink-0 w-20">
                   <span className="text-gray-500 text-sm whitespace-nowrap">
-                    Ongoing
+                    Present
                   </span>
                 </div>
                 <div className="flex-1">
                   <div className="mb-1">
-                    <span className="text-gray-900">
+                    <a
+                      href="https://business.oxinion.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-900 hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                    >
                       🏢 Oxinion for Business
-                    </span>
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        className="text-gray-400"
+                      >
+                        <path
+                          d="M3.5 3C3.22386 3 3 3.22386 3 3.5C3 3.77614 3.22386 4 3.5 4V3ZM8.5 3.5H9C9 3.22386 8.77614 3 8.5 3V3.5ZM8 8.5C8 8.77614 8.22386 9 8.5 9C8.77614 9 9 8.77614 9 8.5H8ZM2.64645 8.64645C2.45118 8.84171 2.45118 9.15829 2.64645 9.35355C2.84171 9.54882 3.15829 9.54882 3.35355 9.35355L2.64645 8.64645ZM3.5 4H8.5V3H3.5V4ZM8 3.5V8.5H9V3.5H8ZM8.14645 3.14645L2.64645 8.64645L3.35355 9.35355L8.85355 3.85355L8.14645 3.14645Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </a>
                   </div>
                   <div className="text-gray-600 space-y-1">
                     <p className="mb-2">
@@ -372,14 +410,31 @@ export default function Home() {
               <div className="flex gap-6">
                 <div className="shrink-0 w-20">
                   <span className="text-gray-500 text-sm whitespace-nowrap">
-                    2024 — 2026
+                    Present
                   </span>
                 </div>
                 <div className="flex-1">
                   <div className="mb-1">
-                    <span className="text-gray-900">
+                    <a
+                      href="https://omx.oxinion.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-900 hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                    >
                       🔧 OMX (Oxinion Marketing eXchange)
-                    </span>
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        className="text-gray-400"
+                      >
+                        <path
+                          d="M3.5 3C3.22386 3 3 3.22386 3 3.5C3 3.77614 3.22386 4 3.5 4V3ZM8.5 3.5H9C9 3.22386 8.77614 3 8.5 3V3.5ZM8 8.5C8 8.77614 8.22386 9 8.5 9C8.77614 9 9 8.77614 9 8.5H8ZM2.64645 8.64645C2.45118 8.84171 2.45118 9.15829 2.64645 9.35355C2.84171 9.54882 3.15829 9.54882 3.35355 9.35355L2.64645 8.64645ZM3.5 4H8.5V3H3.5V4ZM8 3.5V8.5H9V3.5H8ZM8.14645 3.14645L2.64645 8.64645L3.35355 9.35355L8.85355 3.85355L8.14645 3.14645Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </a>
                   </div>
                   <div className="text-gray-600 space-y-1">
                     <p className="mb-2">
@@ -410,7 +465,7 @@ export default function Home() {
               <div className="flex gap-6">
                 <div className="shrink-0 w-20">
                   <span className="text-gray-500 text-sm whitespace-nowrap">
-                    Ongoing
+                    Present
                   </span>
                 </div>
                 <div className="flex-1">
@@ -421,7 +476,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="text-gray-900 hover:text-blue-600 transition-colors inline-flex items-center gap-1"
                     >
-                      🎣 Jobangnakji.com
+                      🐙 Jobangnakji.com
                       <svg
                         width="12"
                         height="12"
@@ -437,21 +492,19 @@ export default function Home() {
                     </a>
                   </div>
                   <div className="text-gray-600 space-y-1">
-                    <p className="mb-2">
-                      Korean fishing spot discovery and community platform
-                    </p>
+                    <p className="mb-2">Korean octopus restaurant eCommerce website</p>
                     <ul className="space-y-1 list-disc list-inside">
                       <li>
-                        Developed location-based fishing spot recommendations
-                        and reviews
+                        Developed location-based octopus restaurant
+                        recommendations and reviews
                       </li>
                       <li>
-                        Built community features for sharing fishing experiences
-                        and tips
+                        Built community features for sharing restaurant
+                        experiences and octopus dish recommendations
                       </li>
                       <li>
-                        Implemented weather and tide data integration for
-                        optimal fishing conditions
+                        Implemented menu integration and restaurant hours data
+                        for optimal dining experiences
                       </li>
                     </ul>
                     <p className="mt-2">
