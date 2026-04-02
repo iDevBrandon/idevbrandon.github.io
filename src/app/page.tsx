@@ -1,450 +1,497 @@
-"use client";
-import { useState, useEffect } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
 export default function Home() {
-  const [activeSection, setActiveSection] = useState("");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ["about", "projects", "skills", "contact"];
-      const scrollPosition = window.scrollY + 100;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <div className="min-h-screen bg-background">
-      {/* Fixed Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-primary/10 border border-primary rounded flex items-center justify-center">
-                <span className="text-primary font-mono text-lg font-bold">B</span>
-              </div>
-              <div>
-                <h1 className="text-lg font-bold">Brandon Ha</h1>
-                <p className="text-muted-foreground text-sm">Frontend Developer</p>
-              </div>
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              <a
-                href="#about"
-                className={`text-sm font-mono transition-colors hover:text-primary ${
-                  activeSection === "about" ? "text-primary" : "text-muted-foreground"
-                }`}
-              >
-                <span className="text-primary">01.</span> About
-              </a>
-              <a
-                href="#projects"
-                className={`text-sm font-mono transition-colors hover:text-primary ${
-                  activeSection === "projects" ? "text-primary" : "text-muted-foreground"
-                }`}
-              >
-                <span className="text-primary">02.</span> Projects
-              </a>
-              <a
-                href="#skills"
-                className={`text-sm font-mono transition-colors hover:text-primary ${
-                  activeSection === "skills" ? "text-primary" : "text-muted-foreground"
-                }`}
-              >
-                <span className="text-primary">03.</span> Skills
-              </a>
-              <a
-                href="#contact"
-                className={`text-sm font-mono transition-colors hover:text-primary ${
-                  activeSection === "contact" ? "text-primary" : "text-muted-foreground"
-                }`}
-              >
-                <span className="text-primary">04.</span> Contact
-              </a>
-            </nav>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="max-w-2xl mx-auto px-4 py-12 text-sm leading-relaxed text-gray-900">
+        <section className="mb-16">
+          <h1 className="mb-8 text-2xl font-semibold text-gray-900">
+            Seongyeon (Brandon) Ha
+          </h1>
 
-      <main>
-        {/* Hero Section */}
-        <section className="min-h-screen flex items-center pt-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl">
-              <p className="text-primary font-mono text-base mb-5">Hi, my name is</p>
-              <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-5">
-                Brandon Ha.
-              </h1>
-              <h2 className="text-4xl md:text-6xl font-bold text-muted-foreground mb-6">
-                I build things for the web.
-              </h2>
-              <p className="text-lg text-muted-foreground mb-12 max-w-2xl leading-relaxed">
-                I&apos;m a frontend developer specializing in building exceptional digital experiences. 
-                Currently, I&apos;m focused on building innovative trading platforms at{" "}
-                <span className="text-primary">OXINION</span>.
-              </p>
-              <div className="flex gap-4">
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-primary text-primary hover:bg-primary/10"
-                  asChild
+          {/* Contacts */}
+          <section className="mb-12">
+            <h3 className="text-lg font-medium mb-6">Contacts</h3>
+            <div className="text-gray-600 space-y-1">
+              <p>📧 idevbrandon@gmail.com</p>
+              <p>☎ (647) 321-5258</p>
+              <p>
+                💼{" "}
+                <a
+                  href="https://www.linkedin.com/in/idevbrandon/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
-                  <a href="#projects">Check out my work!</a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* About Section */}
-        <section id="about" className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="flex items-center text-2xl md:text-3xl font-bold mb-16">
-                <span className="text-primary font-mono mr-4">01.</span>
-                About Me
-                <div className="ml-8 h-px bg-border flex-1 max-w-xs"></div>
-              </h2>
-              <div className="grid md:grid-cols-3 gap-12 items-start">
-                <div className="md:col-span-2">
-                  <div className="space-y-4 text-muted-foreground leading-relaxed">
-                    <p>
-                      Hello! I&apos;m Brandon, and I enjoy creating things that live on the internet. 
-                      My interest in web development started back when I decided to try building custom 
-                      trading interfaces — turns out hacking together HTML & CSS taught me a lot about 
-                      frontend development!
-                    </p>
-                    <p>
-                      Fast-forward to today, and I&apos;ve had the privilege of working on innovative 
-                      financial platforms and trading systems. My main focus these days is building 
-                      accessible, inclusive products and digital experiences at{" "}
-                      <span className="text-primary">OXINION</span> for a variety of clients.
-                    </p>
-                    <p>
-                      Here are a few technologies I&apos;ve been working with recently:
-                    </p>
-                    <div className="grid grid-cols-2 gap-2 mt-4">
-                      <div className="flex items-center">
-                        <span className="text-primary mr-2">▸</span>
-                        <span className="font-mono text-sm">JavaScript (ES6+)</span>
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-primary mr-2">▸</span>
-                        <span className="font-mono text-sm">TypeScript</span>
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-primary mr-2">▸</span>
-                        <span className="font-mono text-sm">React</span>
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-primary mr-2">▸</span>
-                        <span className="font-mono text-sm">Next.js</span>
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-primary mr-2">▸</span>
-                        <span className="font-mono text-sm">Node.js</span>
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-primary mr-2">▸</span>
-                        <span className="font-mono text-sm">PostgreSQL</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="relative">
-                  <div className="relative group">
-                    <div className="absolute -inset-4 bg-primary/20 rounded-lg transform rotate-3 group-hover:rotate-6 transition-transform"></div>
-                    <div className="relative bg-card border border-border rounded-lg p-4">
-                      <Avatar className="w-full h-64 rounded-lg">
-                        <AvatarImage src="/avatar.jpg" alt="Brandon Ha" className="object-cover" />
-                        <AvatarFallback className="rounded-lg bg-muted text-2xl">BH</AvatarFallback>
-                      </Avatar>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Projects Section */}
-        <section id="projects" className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="flex items-center text-2xl md:text-3xl font-bold mb-16">
-                <span className="text-primary font-mono mr-4">02.</span>
-                Some Things I&apos;ve Built
-                <div className="ml-8 h-px bg-border flex-1 max-w-xs"></div>
-              </h2>
-              <div className="space-y-24">
-                {/* Featured Project 1 */}
-                <div className="grid md:grid-cols-12 gap-8 items-center group">
-                  <div className="md:col-span-7 order-2 md:order-1">
-                    <div className="relative bg-card border border-border rounded-lg overflow-hidden">
-                      <div className="aspect-video bg-muted flex items-center justify-center">
-                        <span className="text-muted-foreground font-mono">Oxinion Platform</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="md:col-span-5 order-1 md:order-2 text-right">
-                    <p className="text-primary font-mono text-sm mb-2">Featured Project</p>
-                    <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
-                      <a href="https://oxinion.com" target="_blank" rel="noopener noreferrer">
-                        Oxinion Trading Platform
-                      </a>
-                    </h3>
-                    <div className="bg-card border border-border rounded p-6 mb-4">
-                      <p className="text-muted-foreground leading-relaxed">
-                        A comprehensive trading platform with real-time market data, advanced charting 
-                        capabilities, and portfolio management tools. Built with modern web technologies 
-                        to provide traders with professional-grade analytics and execution capabilities.
-                      </p>
-                    </div>
-                    <div className="flex flex-wrap gap-3 justify-end mb-4">
-                      <span className="text-muted-foreground font-mono text-sm">React</span>
-                      <span className="text-muted-foreground font-mono text-sm">TypeScript</span>
-                      <span className="text-muted-foreground font-mono text-sm">Node.js</span>
-                      <span className="text-muted-foreground font-mono text-sm">WebSocket</span>
-                    </div>
-                    <div className="flex gap-4 justify-end">
-                      <a 
-                        href="https://oxinion.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5z" />
-                          <path fillRule="evenodd" d="M7.414 15.414a2 2 0 01-2.828-2.828l3-3a2 2 0 012.828 0 1 1 0 001.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5z" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Featured Project 2 */}
-                <div className="grid md:grid-cols-12 gap-8 items-center group">
-                  <div className="md:col-span-5 order-1">
-                    <p className="text-primary font-mono text-sm mb-2">Featured Project</p>
-                    <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
-                      <a href="https://finance.oxinion.com" target="_blank" rel="noopener noreferrer">
-                        Oxinion Finance
-                      </a>
-                    </h3>
-                    <div className="bg-card border border-border rounded p-6 mb-4">
-                      <p className="text-muted-foreground leading-relaxed">
-                        A financial research platform providing comprehensive market insights, 
-                        company analysis, and investment tools. Features real-time data visualization, 
-                        advanced filtering, and portfolio tracking capabilities for informed decision making.
-                      </p>
-                    </div>
-                    <div className="flex flex-wrap gap-3 mb-4">
-                      <span className="text-muted-foreground font-mono text-sm">Next.js</span>
-                      <span className="text-muted-foreground font-mono text-sm">Tailwind CSS</span>
-                      <span className="text-muted-foreground font-mono text-sm">PostgreSQL</span>
-                      <span className="text-muted-foreground font-mono text-sm">API Integration</span>
-                    </div>
-                    <div className="flex gap-4">
-                      <a 
-                        href="https://finance.oxinion.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5z" />
-                          <path fillRule="evenodd" d="M7.414 15.414a2 2 0 01-2.828-2.828l3-3a2 2 0 012.828 0 1 1 0 001.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5z" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="md:col-span-7 order-2">
-                    <div className="relative bg-card border border-border rounded-lg overflow-hidden">
-                      <div className="aspect-video bg-muted flex items-center justify-center">
-                        <span className="text-muted-foreground font-mono">Finance Dashboard</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Featured Project 3 */}
-                <div className="grid md:grid-cols-12 gap-8 items-center group">
-                  <div className="md:col-span-7 order-2 md:order-1">
-                    <div className="relative bg-card border border-border rounded-lg overflow-hidden">
-                      <div className="aspect-video bg-muted flex items-center justify-center">
-                        <span className="text-muted-foreground font-mono">OMX Platform</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="md:col-span-5 order-1 md:order-2 text-right">
-                    <p className="text-primary font-mono text-sm mb-2">Featured Project</p>
-                    <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
-                      <a href="https://omx.oxinion.com" target="_blank" rel="noopener noreferrer">
-                        OMX Options Exchange
-                      </a>
-                    </h3>
-                    <div className="bg-card border border-border rounded p-6 mb-4">
-                      <p className="text-muted-foreground leading-relaxed">
-                        A sophisticated options trading platform featuring advanced order management, 
-                        comprehensive risk analytics, and real-time market data feeds. Designed for 
-                        professional traders requiring institutional-grade tools and performance.
-                      </p>
-                    </div>
-                    <div className="flex flex-wrap gap-3 justify-end mb-4">
-                      <span className="text-muted-foreground font-mono text-sm">React</span>
-                      <span className="text-muted-foreground font-mono text-sm">Python</span>
-                      <span className="text-muted-foreground font-mono text-sm">MongoDB</span>
-                      <span className="text-muted-foreground font-mono text-sm">Trading APIs</span>
-                    </div>
-                    <div className="flex gap-4 justify-end">
-                      <a 
-                        href="https://omx.oxinion.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5z" />
-                          <path fillRule="evenodd" d="M7.414 15.414a2 2 0 01-2.828-2.828l3-3a2 2 0 012.828 0 1 1 0 001.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5z" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="skills" className="py-20 bg-muted/50">
-          <div className="container mx-auto px-4">
-            <h3 className="text-3xl font-bold text-center mb-12">
-              Skills & Technologies
-            </h3>
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="text-center">
-                  <Badge variant="outline" className="text-lg p-3">
-                    JavaScript
-                  </Badge>
-                </div>
-                <div className="text-center">
-                  <Badge variant="outline" className="text-lg p-3">
-                    TypeScript
-                  </Badge>
-                </div>
-                <div className="text-center">
-                  <Badge variant="outline" className="text-lg p-3">
-                    React
-                  </Badge>
-                </div>
-                <div className="text-center">
-                  <Badge variant="outline" className="text-lg p-3">
-                    Next.js
-                  </Badge>
-                </div>
-                <div className="text-center">
-                  <Badge variant="outline" className="text-lg p-3">
-                    Node.js
-                  </Badge>
-                </div>
-                <div className="text-center">
-                  <Badge variant="outline" className="text-lg p-3">
-                    Python
-                  </Badge>
-                </div>
-                <div className="text-center">
-                  <Badge variant="outline" className="text-lg p-3">
-                    PostgreSQL
-                  </Badge>
-                </div>
-                <div className="text-center">
-                  <Badge variant="outline" className="text-lg p-3">
-                    Git
-                  </Badge>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" className="py-20">
-          <div className="container mx-auto px-4">
-            <h3 className="text-3xl font-bold text-center mb-12">
-              Get In Touch
-            </h3>
-            <div className="max-w-2xl mx-auto text-center">
-              <p className="text-muted-foreground mb-8">
-                I&apos;m always interested in new opportunities and interesting
-                projects. Feel free to reach out if you&apos;d like to work
-                together!
+                  LinkedIn
+                </a>
               </p>
-              <div className="flex gap-4 justify-center flex-wrap">
-                <Button asChild>
-                  <a href="mailto:idevbrandon@gmail.com">Email Me</a>
-                </Button>
-                <Button variant="outline" asChild>
-                  <a
-                    href="https://www.linkedin.com/in/idevbrandon/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    LinkedIn
-                  </a>
-                </Button>
-                <Button variant="outline" asChild>
-                  <a
-                    href="https://docs.google.com/document/d/1-pB9W-ymRE7-5bB9gLD0gdCks9MBg_qq860wHlN9gYU/edit?tab=t.0#heading=h.2l6shjehg56f"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View CV
-                  </a>
-                </Button>
-                <Button variant="outline" asChild>
-                  <a
-                    href="https://github.com/iDevBrandon"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </Button>
+              <p>
+                📝{" "}
+                <a
+                  href="https://medium.com/@idevbrandon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                >
+                  Medium Blog
+                </a>
+              </p>
+            </div>
+          </section>
+
+          {/* Skills Summary */}
+          <section className="mb-12">
+            <h3 className="text-lg font-medium mb-6">
+              Skills & Experiences Summary
+            </h3>
+            <div className="text-gray-600">
+              <p>
+                Next.js (React), Expo (React Native), Redux Toolkit, React
+                Query, Express.js, MongoDB, Supabase
+              </p>
+            </div>
+          </section>
+
+          {/* Professional Experience */}
+          <section className="mb-12">
+            <h3 className="text-lg font-medium mb-6">
+              Professional Experience
+            </h3>
+            <div className="space-y-8">
+              {/* Openmile */}
+              <div className="flex gap-6">
+                <div className="shrink-0 w-20">
+                  <span className="text-gray-500 text-sm whitespace-nowrap">
+                    2024 — 2026
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <div className="mb-1">
+                    <span className="text-gray-900">
+                      Web Developer @ Platform development Team at Openmile
+                    </span>
+                  </div>
+                  <div className="text-gray-600 space-y-1">
+                    <p className="mb-2">
+                      Vehicle management SaaS platform for commercial fleet
+                      maintenance
+                    </p>
+                    <ul className="space-y-1 list-disc list-inside">
+                      <li>
+                        Led frontend development for the "OneConnect"
+                        maintenance platform app for auto repair shops using
+                        Expo React Native, managing EAS build pipelines for App
+                        Store and Google Play releases
+                      </li>
+                      <li>
+                        Architected and maintained a Turborepo-based monorepo
+                        supporting multiple Next.js 15 applications (One Care,
+                        One Connect, Admin) with a shared UI component library
+                        and centralized API response configurations
+                      </li>
+                      <li>
+                        Introduced Orval-based API client and React Query hook
+                        generation, improving type safety, reducing boilerplate,
+                        and significantly boosting frontend team productivity
+                      </li>
+                      <li>
+                        Contributed to the processing of over 8000+ accident
+                        reports, improving workflow automation for the call
+                        center
+                      </li>
+                      <li>
+                        Built vehicle monitor dashboard with map-based
+                        visualizations and color-coded speed insights from
+                        vehicle ODM
+                      </li>
+                      <li>
+                        Migrated CI/CD pipelines from GitHub/Vercel to GitLab,
+                        introducing Argo CD for k8s(Kubernetes) deployments, and
+                        containerized web applications with Docker on Amazon EKS
+                        for scalable production workloads
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Surff Company */}
+              <div className="flex gap-6">
+                <div className="shrink-0 w-20">
+                  <span className="text-gray-500 text-sm whitespace-nowrap">
+                    2023
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <div className="mb-1">
+                    <span className="text-gray-900">
+                      Frontend Web Developer at Surff Company
+                    </span>
+                  </div>
+                  <div className="text-gray-600 space-y-1">
+                    <p className="mb-2">
+                      In-house venture of Hyundai Motor Group - export/import
+                      cargo(vessel) marketplace
+                    </p>
+                    <ul className="space-y-1 list-disc list-inside">
+                      <li>
+                        Modernized Frontend Architecture: Migrated legacy jQuery
+                        codebase to a modular React framework
+                      </li>
+                      <li>
+                        Apply React Query to reduce load times and debounce for
+                        high-frequency searched destination data
+                      </li>
+                      <li>
+                        Developed a cargo pricing tool with API integration for
+                        accurate and responsive calculations
+                      </li>
+                      <li>
+                        Developed an interactive dashboard for managing and
+                        visualizing import/export volume data
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Uptempo Global */}
+              <div className="flex gap-6">
+                <div className="shrink-0 w-20">
+                  <span className="text-gray-500 text-sm whitespace-nowrap">
+                    2022
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <div className="mb-1">
+                    <span className="text-gray-900">
+                      Software Developer at Uptempo Global Inc
+                    </span>
+                  </div>
+                  <div className="text-gray-600 space-y-1">
+                    <p className="mb-2">Developed DApp called "Suhosin"</p>
+                    <ul className="space-y-1 list-disc list-inside">
+                      <li>
+                        Developed DApp Suhosin NFTs with Caver.js and IPFS and
+                        traded up to 5000 on OpenSea
+                      </li>
+                      <li>
+                        Optimized state management with Redux and improved
+                        performance using Lazy Loading and Caching
+                      </li>
+                      <li>
+                        Experienced in AWS S3/CloudFront with CI/CD integration
+                        for scalable hosting and global delivery
+                      </li>
+                      <li>
+                        Integrated Klaytn CDN for secure NFT loading,
+                        authentication validation, and mock data for API
+                        downtime
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Community STEM Instructor */}
+              <div className="flex gap-6">
+                <div className="shrink-0 w-20">
+                  <span className="text-gray-500 text-sm whitespace-nowrap">
+                    2016
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <div className="mb-1">
+                    <span className="text-gray-900">
+                      Community STEM Instructor (Volunteer), Birmingham
+                      Community Center, UK
+                    </span>
+                  </div>
+                  <div className="text-gray-600 space-y-1">
+                    <ul className="space-y-1 list-disc list-inside">
+                      <li>
+                        Led weekly Saturday sessions teaching robotics and
+                        coding to 3 children
+                      </li>
+                      <li>
+                        Guided students through hands-on Arduino projects,
+                        including LED controllers, motion sensors
+                      </li>
+                      <li>
+                        Designed interactive lessons that simplified complex
+                        concepts and encouraged experimentation
+                      </li>
+                      <li>
+                        Fostered a supportive and engaging learning environment,
+                        helping children build confidence in STEM skills
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-      </main>
+          </section>
 
-      <footer className="border-t py-8">
-        <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>&copy; 2024 Brandon. All rights reserved.</p>
-        </div>
-      </footer>
+          {/* Projects */}
+          <section className="mb-12">
+            <h3 className="text-lg font-medium mb-6">Projects</h3>
+            <div className="space-y-8">
+              <div className="flex gap-6">
+                <div className="shrink-0 w-20">
+                  <span className="text-gray-500 text-sm whitespace-nowrap">
+                    Ongoing
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <div className="mb-1">
+                    <a
+                      href="https://oxinion.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-900 hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                    >
+                      🗺 Oxinion
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        className="text-gray-400"
+                      >
+                        <path
+                          d="M3.5 3C3.22386 3 3 3.22386 3 3.5C3 3.77614 3.22386 4 3.5 4V3ZM8.5 3.5H9C9 3.22386 8.77614 3 8.5 3V3.5ZM8 8.5C8 8.77614 8.22386 9 8.5 9C8.77614 9 9 8.77614 9 8.5H8ZM2.64645 8.64645C2.45118 8.84171 2.45118 9.15829 2.64645 9.35355C2.84171 9.54882 3.15829 9.54882 3.35355 9.35355L2.64645 8.64645ZM3.5 4H8.5V3H3.5V4ZM8 3.5V8.5H9V3.5H8ZM8.14645 3.14645L2.64645 8.64645L3.35355 9.35355L8.85355 3.85355L8.14645 3.14645Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <div className="text-gray-600 space-y-1">
+                    <p className="mb-2">
+                      Location-based social media and geo-first marketing SaaS
+                    </p>
+                    <ul className="space-y-1 list-disc list-inside">
+                      <li>
+                        Built a location-based service using GeoJSON and Google
+                        Maps for geospatial content discovery
+                      </li>
+                      <li>
+                        Developed immersive AR experiences with AR.js and
+                        implemented seamless SSO authentication across platforms
+                      </li>
+                      <li>
+                        Set up CI/CD pipelines with GitHub Actions for automated
+                        data workflows
+                      </li>
+                      <li>
+                        Streamlined state management with Redux Toolkit and
+                        later transitioned to Zustand
+                      </li>
+                    </ul>
+                    <p className="mt-2">
+                      <strong>Technologies:</strong> Next.js 15, Supabase,
+                      MonoRepo, Zustand, MongoDB, Google Maps, AR.js, Redux
+                      Toolkit, TypeScript, Prisma, TailwindCSS
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-6">
+                <div className="shrink-0 w-20">
+                  <span className="text-gray-500 text-sm whitespace-nowrap">
+                    Ongoing
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <div className="mb-1">
+                    <span className="text-gray-900">💰 Oxinion Finance</span>
+                  </div>
+                  <div className="text-gray-600 space-y-1">
+                    <p className="mb-2">
+                      Financial data tools and investment tracking platform
+                    </p>
+                    <ul className="space-y-1 list-disc list-inside">
+                      <li>
+                        Automated financial index collection and storage using
+                        Supabase and cron jobs
+                      </li>
+                      <li>
+                        Enhanced user experience through goal-based financial
+                        planning tools and interactive dashboards
+                      </li>
+                      <li>
+                        Built real-time market data visualization and portfolio
+                        tracking features
+                      </li>
+                    </ul>
+                    <p className="mt-2">
+                      <strong>Technologies:</strong> Next.js 15, Supabase,
+                      FastAPI, TypeScript, TailwindCSS
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-6">
+                <div className="shrink-0 w-20">
+                  <span className="text-gray-500 text-sm whitespace-nowrap">
+                    Ongoing
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <div className="mb-1">
+                    <span className="text-gray-900">
+                      🏢 Oxinion for Business
+                    </span>
+                  </div>
+                  <div className="text-gray-600 space-y-1">
+                    <p className="mb-2">
+                      Business management and analytics platform
+                    </p>
+                    <ul className="space-y-1 list-disc list-inside">
+                      <li>
+                        Developed business intelligence dashboards for
+                        data-driven decision making
+                      </li>
+                      <li>
+                        Implemented customer relationship management and project
+                        tracking tools
+                      </li>
+                      <li>
+                        Created automated reporting and performance analytics
+                        features
+                      </li>
+                    </ul>
+                    <p className="mt-2">
+                      <strong>Technologies:</strong> Next.js 15, Supabase,
+                      TypeScript, TailwindCSS
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-6">
+                <div className="shrink-0 w-20">
+                  <span className="text-gray-500 text-sm whitespace-nowrap">
+                    2024 — 2026
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <div className="mb-1">
+                    <span className="text-gray-900">
+                      🔧 OMX (Oxinion Marketing eXchange)
+                    </span>
+                  </div>
+                  <div className="text-gray-600 space-y-1">
+                    <p className="mb-2">
+                      Vehicle maintenance platform app for auto repair shops
+                    </p>
+                    <ul className="space-y-1 list-disc list-inside">
+                      <li>
+                        Led frontend development using Expo React Native for
+                        cross-platform mobile deployment
+                      </li>
+                      <li>
+                        Managed EAS build pipelines for App Store and Google
+                        Play releases
+                      </li>
+                      <li>
+                        Built vehicle monitor dashboard with map-based
+                        visualizations and real-time data
+                      </li>
+                    </ul>
+                    <p className="mt-2">
+                      <strong>Technologies:</strong> Expo React Native,
+                      TypeScript, EAS Build
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-6">
+                <div className="shrink-0 w-20">
+                  <span className="text-gray-500 text-sm whitespace-nowrap">
+                    Ongoing
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <div className="mb-1">
+                    <a
+                      href="https://jobangnakji.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-900 hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                    >
+                      🎣 Jobangnakji.com
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        className="text-gray-400"
+                      >
+                        <path
+                          d="M3.5 3C3.22386 3 3 3.22386 3 3.5C3 3.77614 3.22386 4 3.5 4V3ZM8.5 3.5H9C9 3.22386 8.77614 3 8.5 3V3.5ZM8 8.5C8 8.77614 8.22386 9 8.5 9C8.77614 9 9 8.77614 9 8.5H8ZM2.64645 8.64645C2.45118 8.84171 2.45118 9.15829 2.64645 9.35355C2.84171 9.54882 3.15829 9.54882 3.35355 9.35355L2.64645 8.64645ZM3.5 4H8.5V3H3.5V4ZM8 3.5V8.5H9V3.5H8ZM8.14645 3.14645L2.64645 8.64645L3.35355 9.35355L8.85355 3.85355L8.14645 3.14645Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <div className="text-gray-600 space-y-1">
+                    <p className="mb-2">
+                      Korean fishing spot discovery and community platform
+                    </p>
+                    <ul className="space-y-1 list-disc list-inside">
+                      <li>
+                        Developed location-based fishing spot recommendations
+                        and reviews
+                      </li>
+                      <li>
+                        Built community features for sharing fishing experiences
+                        and tips
+                      </li>
+                      <li>
+                        Implemented weather and tide data integration for
+                        optimal fishing conditions
+                      </li>
+                    </ul>
+                    <p className="mt-2">
+                      <strong>Technologies:</strong> Next.js, Supabase,
+                      TypeScript, TailwindCSS
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Education */}
+          <section className="mb-12">
+            <h3 className="text-lg font-medium mb-6">Education</h3>
+            <div className="space-y-8">
+              <div className="flex gap-6">
+                <div className="shrink-0 w-20">
+                  <span className="text-gray-500 text-sm whitespace-nowrap">
+                    2015 — 2018
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <div className="mb-1">
+                    <span className="text-gray-900">
+                      Computing for Business BSc at Aston University
+                    </span>
+                  </div>
+                  <div className="text-gray-500 text-sm mb-2">
+                    Birmingham, UK
+                  </div>
+                  <div className="text-gray-600">
+                    <p>Study Field: Computer Science & Business</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
     </div>
   );
 }
