@@ -1,4 +1,21 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Home() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const uptempoimages = [
+    { id: 1, src: "/uptempo1.png", alt: "Uptempo 1" },
+    { id: 2, src: "/uptempo2.png", alt: "Uptempo 2" },
+    { id: 3, src: "/uptempo3.png", alt: "Uptempo 3" },
+    { id: 4, src: "/uptempo4.png", alt: "Uptempo 4" }
+  ];
+
+  const surffimages = [
+    { id: 1, src: "/surff1.png", alt: "Surff 1" }
+  ];
+
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
       <div className="max-w-2xl mx-auto px-4 py-12 text-sm leading-relaxed text-gray-900">
@@ -70,7 +87,7 @@ export default function Home() {
                       href="https://play.google.com/store/apps/details?id=com.openmile.partner&hl=en"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-900 hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                      className="text-blue-600 hover:text-blue-800 transition-colors inline-flex items-center gap-1"
                     >
                       Web Developer @ Platform development Team at Openmile
                       <svg
@@ -144,7 +161,7 @@ export default function Home() {
                       href="https://surff.kr"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-900 hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                      className="text-blue-600 hover:text-blue-800 transition-colors inline-flex items-center gap-1"
                     >
                       Frontend Web Developer @ Surff Company
                       <svg
@@ -184,6 +201,26 @@ export default function Home() {
                         visualizing import/export volume data
                       </li>
                     </ul>
+                    
+                    {/* Image Gallery */}
+                    <div className="mt-4">
+                      <p className="mb-2 text-sm font-medium">Project Gallery:</p>
+                      <div className="flex gap-2">
+                        {surffimages.map((image) => (
+                          <button
+                            key={image.id}
+                            onClick={() => setSelectedImage(image.src)}
+                            className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
+                          >
+                            <img
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-full object-cover"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -197,9 +234,26 @@ export default function Home() {
                 </div>
                 <div className="flex-1">
                   <div className="mb-1">
-                    <span className="text-gray-900">
+                    <a
+                      href="https://www.forbes.com/digital-assets/nfts/suhosin-sh/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 transition-colors inline-flex items-center gap-1"
+                    >
                       Software Developer @ Uptempo Global Inc
-                    </span>
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        className="text-gray-400"
+                      >
+                        <path
+                          d="M3.5 3C3.22386 3 3 3.22386 3 3.5C3 3.77614 3.22386 4 3.5 4V3ZM8.5 3.5H9C9 3.22386 8.77614 3 8.5 3V3.5ZM8 8.5C8 8.77614 8.22386 9 8.5 9C8.77614 9 9 8.77614 9 8.5H8ZM2.64645 8.64645C2.45118 8.84171 2.45118 9.15829 2.64645 9.35355C2.84171 9.54882 3.15829 9.54882 3.35355 9.35355L2.64645 8.64645ZM3.5 4H8.5V3H3.5V4ZM8 3.5V8.5H9V3.5H8ZM8.14645 3.14645L2.64645 8.64645L3.35355 9.35355L8.85355 3.85355L8.14645 3.14645Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </a>
                   </div>
                   <div className="text-gray-600 space-y-1">
                     <p className="mb-2">
@@ -224,6 +278,26 @@ export default function Home() {
                         downtime
                       </li>
                     </ul>
+                    
+                    {/* Image Gallery */}
+                    <div className="mt-4">
+                      <p className="mb-2 text-sm font-medium">Project Gallery:</p>
+                      <div className="flex gap-2">
+                        {uptempoimages.map((image) => (
+                          <button
+                            key={image.id}
+                            onClick={() => setSelectedImage(image.src)}
+                            className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
+                          >
+                            <img
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-full object-cover"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -283,7 +357,7 @@ export default function Home() {
                       href="https://oxinion.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-900 hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                      className="text-blue-600 hover:text-blue-800 transition-colors inline-flex items-center gap-1"
                     >
                       🗺 Oxinion
                       <svg
@@ -343,7 +417,7 @@ export default function Home() {
                       href="https://finance.oxinion.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-900 hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                      className="text-blue-600 hover:text-blue-800 transition-colors inline-flex items-center gap-1"
                     >
                       💰 Oxinion Finance
                       <svg
@@ -398,7 +472,7 @@ export default function Home() {
                       href="https://business.oxinion.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-900 hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                      className="text-blue-600 hover:text-blue-800 transition-colors inline-flex items-center gap-1"
                     >
                       🏢 Oxinion for Business
                       <svg
@@ -453,7 +527,7 @@ export default function Home() {
                       href="https://omx.oxinion.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-900 hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                      className="text-blue-600 hover:text-blue-800 transition-colors inline-flex items-center gap-1"
                     >
                       🔧 OMX (Oxinion Marketing eXchange)
                       <svg
@@ -508,7 +582,7 @@ export default function Home() {
                       href="https://jobangnakji.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-900 hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                      className="text-blue-600 hover:text-blue-800 transition-colors inline-flex items-center gap-1"
                     >
                       🐙 Jobangnakji.com
                       <svg
@@ -579,6 +653,41 @@ export default function Home() {
           </section>
         </section>
       </div>
+
+      {/* Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-4xl max-h-full">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 transition-colors z-10"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <img
+              src={selectedImage}
+              alt="Project Screenshot"
+              className="max-w-full max-h-full object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
