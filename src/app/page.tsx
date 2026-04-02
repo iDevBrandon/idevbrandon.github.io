@@ -77,7 +77,7 @@ export default function Home() {
                     </p>
                     <ul className="space-y-1 list-disc list-inside">
                       <li>
-                        Led frontend development for the "OneConnect"
+                        Led frontend development for the &quot;OneConnect&quot;
                         maintenance platform app for auto repair shops using
                         Expo React Native, managing EAS build pipelines for App
                         Store and Google Play releases
@@ -168,7 +168,7 @@ export default function Home() {
                     </span>
                   </div>
                   <div className="text-gray-600 space-y-1">
-                    <p className="mb-2">Developed DApp called "Suhosin"</p>
+                    <p className="mb-2">Developed DApp called &quot;Suhosin&quot;</p>
                     <ul className="space-y-1 list-disc list-inside">
                       <li>
                         Developed DApp Suhosin NFTs with Caver.js and IPFS and
