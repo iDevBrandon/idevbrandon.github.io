@@ -124,7 +124,7 @@ export default function Home() {
                 <div className="flex-1">
                   <div className="mb-1">
                     <span className="text-gray-900">
-                      Frontend Web Developer at Surff Company
+                      Frontend Web Developer @ Surff Company
                     </span>
                   </div>
                   <div className="text-gray-600 space-y-1">
@@ -164,7 +164,7 @@ export default function Home() {
                 <div className="flex-1">
                   <div className="mb-1">
                     <span className="text-gray-900">
-                      Software Developer at Uptempo Global Inc
+                      Software Developer @ Uptempo Global Inc
                     </span>
                   </div>
                   <div className="text-gray-600 space-y-1">
