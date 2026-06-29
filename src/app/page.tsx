@@ -66,6 +66,8 @@ export default function Home() {
 
   const ofbimages = [{ id: 1, src: "/ofb.png", alt: "Oxinion for Business" }];
 
+  const jobangnakjiimages = [{ id: 1, src: "/shop.png", alt: "Shop 1" }];
+
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
       <div className="max-w-2xl mx-auto px-4 py-12 text-sm leading-relaxed text-gray-900">
@@ -714,6 +716,28 @@ export default function Home() {
                       <strong>Technologies:</strong> Next.js, Supabase,
                       TypeScript, TailwindCSS
                     </p>
+
+                    {/* Image Gallery */}
+                    <div className="mt-4">
+                      <p className="mb-2 text-sm font-medium">
+                        Project Gallery:
+                      </p>
+                      <div className="flex gap-2">
+                        {jobangnakjiimages.map((image, idx) => (
+                          <button
+                            key={image.id}
+                            onClick={() => openModal(jobangnakjiimages, idx)}
+                            className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
+                          >
+                            <img
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-full object-cover"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
