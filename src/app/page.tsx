@@ -101,6 +101,17 @@ export default function Home() {
                   Medium Blog
                 </a>
               </p>
+              <p>
+                🐙{" "}
+                <a
+                  href="https://github.com/iDevBrandon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  GitHub
+                </a>
+              </p>
             </div>
           </section>
 
