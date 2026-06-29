@@ -52,6 +52,20 @@ export default function Home() {
 
   const surffimages = [{ id: 1, src: "/surff1.png", alt: "Surff 1" }];
 
+  const oxinioimages = [
+    { id: 1, src: "/oxinion1.png", alt: "Oxinion 1" },
+    { id: 2, src: "/oxinion2.png", alt: "Oxinion 2" },
+  ];
+
+  const financeimages = [
+    { id: 1, src: "/finance1.png", alt: "Finance 1" },
+    { id: 2, src: "/finance2.png", alt: "Finance 2" },
+    { id: 3, src: "/finance3.png", alt: "Finance 3" },
+    { id: 4, src: "/finance4.png", alt: "Finance 4" },
+  ];
+
+  const ofbimages = [{ id: 1, src: "/ofb.png", alt: "Oxinion for Business" }];
+
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
       <div className="max-w-2xl mx-auto px-4 py-12 text-sm leading-relaxed text-gray-900">
@@ -458,10 +472,32 @@ export default function Home() {
                       </li>
                     </ul>
                     <p className="mt-2">
-                      <strong>Technologies:</strong> Next.js 15, Supabase,
-                      MonoRepo, Zustand, MongoDB, Google Maps, AR.js, Redux
-                      Toolkit, TypeScript, Prisma, TailwindCSS
+                      <strong>Technologies:</strong> Next.js 15, Supabase, Expo
+                      React Native, MonoRepo, Zustand, MongoDB, Google Maps,
+                      AR.js, Redux Toolkit, TypeScript, Prisma, TailwindCSS
                     </p>
+
+                    {/* Image Gallery */}
+                    <div className="mt-4">
+                      <p className="mb-2 text-sm font-medium">
+                        Project Gallery:
+                      </p>
+                      <div className="flex gap-2">
+                        {oxinioimages.map((image, idx) => (
+                          <button
+                            key={image.id}
+                            onClick={() => openModal(oxinioimages, idx)}
+                            className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
+                          >
+                            <img
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-full object-cover"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -517,6 +553,26 @@ export default function Home() {
                       <strong>Technologies:</strong> Next.js 15, Supabase,
                       FastAPI, TypeScript, TailwindCSS
                     </p>
+
+                    {/* Image Gallery */}
+                    <div className="mt-4">
+                      <p className="mb-2 text-sm font-medium">Project Gallery:</p>
+                      <div className="flex gap-2">
+                        {financeimages.map((image, idx) => (
+                          <button
+                            key={image.id}
+                            onClick={() => openModal(financeimages, idx)}
+                            className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
+                          >
+                            <img
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-full object-cover"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -572,6 +628,26 @@ export default function Home() {
                       <strong>Technologies:</strong> Next.js 15, Supabase,
                       TypeScript, TailwindCSS
                     </p>
+
+                    {/* Image Gallery */}
+                    <div className="mt-4">
+                      <p className="mb-2 text-sm font-medium">Project Gallery:</p>
+                      <div className="flex gap-2">
+                        {ofbimages.map((image, idx) => (
+                          <button
+                            key={image.id}
+                            onClick={() => openModal(ofbimages, idx)}
+                            className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
+                          >
+                            <img
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-full object-cover"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
