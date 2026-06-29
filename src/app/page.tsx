@@ -1,32 +1,67 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+
+type ImageItem = { id: number; src: string; alt: string };
 
 export default function Home() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [activeGallery, setActiveGallery] = useState<ImageItem[] | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const openModal = (images: ImageItem[], index: number) => {
+    setActiveGallery(images);
+    setActiveIndex(index);
+  };
+
+  const closeModal = () => setActiveGallery(null);
+
+  const goNext = useCallback(() => {
+    if (!activeGallery) return;
+    setActiveIndex((i) => (i + 1) % activeGallery.length);
+  }, [activeGallery]);
+
+  const goPrev = useCallback(() => {
+    if (!activeGallery) return;
+    setActiveIndex(
+      (i) => (i - 1 + activeGallery.length) % activeGallery.length,
+    );
+  }, [activeGallery]);
+
+  useEffect(() => {
+    if (!activeGallery) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") goNext();
+      else if (e.key === "ArrowLeft") goPrev();
+      else if (e.key === "Escape") closeModal();
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [activeGallery, goNext, goPrev]);
+
+  const openmileimages = [
+    { id: 1, src: "/openmile1.webp", alt: "Openmile 1" },
+    { id: 2, src: "/openmile2.webp", alt: "Openmile 2" },
+  ];
 
   const uptempoimages = [
     { id: 1, src: "/uptempo1.png", alt: "Uptempo 1" },
     { id: 2, src: "/uptempo2.png", alt: "Uptempo 2" },
     { id: 3, src: "/uptempo3.png", alt: "Uptempo 3" },
-    { id: 4, src: "/uptempo4.png", alt: "Uptempo 4" }
+    { id: 4, src: "/uptempo4.png", alt: "Uptempo 4" },
   ];
 
-  const surffimages = [
-    { id: 1, src: "/surff1.png", alt: "Surff 1" }
-  ];
+  const surffimages = [{ id: 1, src: "/surff1.png", alt: "Surff 1" }];
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
       <div className="max-w-2xl mx-auto px-4 py-12 text-sm leading-relaxed text-gray-900">
-        <section className="mb-16">
-          <h1 className="mb-8 text-2xl font-semibold text-gray-900">
+        <section className="mb-8">
+          <h1 className="mb-4 text-2xl font-semibold text-gray-900">
             Seongyeon (Brandon) Ha
           </h1>
 
           {/* Contacts */}
-          <section className="mb-12">
-            <h3 className="text-lg font-medium mb-6">Contacts</h3>
+          <section className="mb-6">
             <div className="text-gray-600 space-y-1">
               <p>📧 idevbrandon@gmail.com</p>
               <p>☎ (647) 321-5258</p>
@@ -36,7 +71,7 @@ export default function Home() {
                   href="https://www.linkedin.com/in/idevbrandon/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                  className="text-blue-600 hover:text-blue-800 transition-colors"
                 >
                   LinkedIn
                 </a>
@@ -47,7 +82,7 @@ export default function Home() {
                   href="https://medium.com/@idevbrandon"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                  className="text-blue-600 hover:text-blue-800 transition-colors"
                 >
                   Medium Blog
                 </a>
@@ -144,6 +179,28 @@ export default function Home() {
                         for scalable production workloads
                       </li>
                     </ul>
+
+                    {/* Image Gallery */}
+                    <div className="mt-4">
+                      <p className="mb-2 text-sm font-medium">
+                        Project Gallery:
+                      </p>
+                      <div className="flex gap-2">
+                        {openmileimages.map((image, idx) => (
+                          <button
+                            key={image.id}
+                            onClick={() => openModal(openmileimages, idx)}
+                            className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
+                          >
+                            <img
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-full object-cover"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -201,15 +258,17 @@ export default function Home() {
                         visualizing import/export volume data
                       </li>
                     </ul>
-                    
+
                     {/* Image Gallery */}
                     <div className="mt-4">
-                      <p className="mb-2 text-sm font-medium">Project Gallery:</p>
+                      <p className="mb-2 text-sm font-medium">
+                        Project Gallery:
+                      </p>
                       <div className="flex gap-2">
-                        {surffimages.map((image) => (
+                        {surffimages.map((image, idx) => (
                           <button
                             key={image.id}
-                            onClick={() => setSelectedImage(image.src)}
+                            onClick={() => openModal(surffimages, idx)}
                             className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
                           >
                             <img
@@ -257,7 +316,7 @@ export default function Home() {
                   </div>
                   <div className="text-gray-600 space-y-1">
                     <p className="mb-2">
-                      Developed DApp called &quot;Suhosin&quot;
+                      Developed DApp called &quot;Suhosin&quot; (archived)
                     </p>
                     <ul className="space-y-1 list-disc list-inside">
                       <li>
@@ -278,15 +337,17 @@ export default function Home() {
                         downtime
                       </li>
                     </ul>
-                    
+
                     {/* Image Gallery */}
                     <div className="mt-4">
-                      <p className="mb-2 text-sm font-medium">Project Gallery:</p>
+                      <p className="mb-2 text-sm font-medium">
+                        Project Gallery:
+                      </p>
                       <div className="flex gap-2">
-                        {uptempoimages.map((image) => (
+                        {uptempoimages.map((image, idx) => (
                           <button
                             key={image.id}
-                            onClick={() => setSelectedImage(image.src)}
+                            onClick={() => openModal(uptempoimages, idx)}
                             className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
                           >
                             <img
@@ -524,61 +585,6 @@ export default function Home() {
                 <div className="flex-1">
                   <div className="mb-1">
                     <a
-                      href="https://omx.oxinion.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 transition-colors inline-flex items-center gap-1"
-                    >
-                      🔧 OMX (Oxinion Marketing eXchange)
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                        className="text-gray-400"
-                      >
-                        <path
-                          d="M3.5 3C3.22386 3 3 3.22386 3 3.5C3 3.77614 3.22386 4 3.5 4V3ZM8.5 3.5H9C9 3.22386 8.77614 3 8.5 3V3.5ZM8 8.5C8 8.77614 8.22386 9 8.5 9C8.77614 9 9 8.77614 9 8.5H8ZM2.64645 8.64645C2.45118 8.84171 2.45118 9.15829 2.64645 9.35355C2.84171 9.54882 3.15829 9.54882 3.35355 9.35355L2.64645 8.64645ZM3.5 4H8.5V3H3.5V4ZM8 3.5V8.5H9V3.5H8ZM8.14645 3.14645L2.64645 8.64645L3.35355 9.35355L8.85355 3.85355L8.14645 3.14645Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                  <div className="text-gray-600 space-y-1">
-                    <p className="mb-2">
-                      Vehicle maintenance platform app for auto repair shops
-                    </p>
-                    <ul className="space-y-1 list-disc list-inside">
-                      <li>
-                        Led frontend development using Expo React Native for
-                        cross-platform mobile deployment
-                      </li>
-                      <li>
-                        Managed EAS build pipelines for App Store and Google
-                        Play releases
-                      </li>
-                      <li>
-                        Built vehicle monitor dashboard with map-based
-                        visualizations and real-time data
-                      </li>
-                    </ul>
-                    <p className="mt-2">
-                      <strong>Technologies:</strong> Expo React Native,
-                      TypeScript, EAS Build
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex gap-6">
-                <div className="shrink-0 w-20">
-                  <span className="text-gray-500 text-sm whitespace-nowrap">
-                    Present
-                  </span>
-                </div>
-                <div className="flex-1">
-                  <div className="mb-1">
-                    <a
                       href="https://jobangnakji.com"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -600,7 +606,9 @@ export default function Home() {
                     </a>
                   </div>
                   <div className="text-gray-600 space-y-1">
-                    <p className="mb-2">Korean octopus restaurant eCommerce website</p>
+                    <p className="mb-2">
+                      Korean octopus restaurant eCommerce website
+                    </p>
                     <ul className="space-y-1 list-disc list-inside">
                       <li>
                         Developed location-based octopus restaurant
@@ -655,14 +663,18 @@ export default function Home() {
       </div>
 
       {/* Modal */}
-      {selectedImage && (
+      {activeGallery && (
         <div
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
-          onClick={() => setSelectedImage(null)}
+          onClick={closeModal}
         >
-          <div className="relative max-w-4xl max-h-full">
+          <div
+            className="relative max-w-4xl max-h-full flex items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close */}
             <button
-              onClick={() => setSelectedImage(null)}
+              onClick={closeModal}
               className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 transition-colors z-10"
             >
               <svg
@@ -679,12 +691,61 @@ export default function Home() {
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </button>
+
+            {/* Prev arrow */}
+            {activeGallery.length > 1 && (
+              <button
+                onClick={goPrev}
+                className="absolute left-2 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 transition-colors z-10"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+            )}
+
             <img
-              src={selectedImage}
-              alt="Project Screenshot"
-              className="max-w-full max-h-full object-contain rounded-lg"
-              onClick={(e) => e.stopPropagation()}
+              src={activeGallery[activeIndex].src}
+              alt={activeGallery[activeIndex].alt}
+              className="max-w-full max-h-[80vh] object-contain rounded-lg"
             />
+
+            {/* Next arrow */}
+            {activeGallery.length > 1 && (
+              <button
+                onClick={goNext}
+                className="absolute right-2 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 transition-colors z-10"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            )}
+
+            {/* Counter */}
+            {activeGallery.length > 1 && (
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm bg-black bg-opacity-50 px-3 py-1 rounded-full">
+                {activeIndex + 1} / {activeGallery.length}
+              </div>
+            )}
           </div>
         </div>
       )}
