@@ -143,8 +143,8 @@ export default function Home() {
             </h3>
             <div className="space-y-8">
               {/* Openmile */}
-              <div className="flex gap-6">
-                <div className="shrink-0 w-20">
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-6">
+                <div className="shrink-0 sm:w-20">
                   <span className="text-gray-500 text-sm whitespace-nowrap">
                     2024 — 2026
                   </span>
@@ -218,12 +218,12 @@ export default function Home() {
                       <p className="mb-2 text-sm font-medium">
                         Project Gallery:
                       </p>
-                      <div className="flex gap-2">
+                      <div className="flex flex-wrap gap-2">
                         {openmileimages.map((image, idx) => (
                           <button
                             key={image.id}
                             onClick={() => openModal(openmileimages, idx)}
-                            className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
+                            className="relative w-16 h-16 border border-gray-200 rounded hover:border-gray-300 transition-colors"
                           >
                             <img
                               src={image.src}
@@ -239,8 +239,8 @@ export default function Home() {
               </div>
 
               {/* Surff Company */}
-              <div className="flex gap-6">
-                <div className="shrink-0 w-20">
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-6">
+                <div className="shrink-0 sm:w-20">
                   <span className="text-gray-500 text-sm whitespace-nowrap">
                     2023
                   </span>
@@ -297,12 +297,12 @@ export default function Home() {
                       <p className="mb-2 text-sm font-medium">
                         Project Gallery:
                       </p>
-                      <div className="flex gap-2">
+                      <div className="flex flex-wrap gap-2">
                         {surffimages.map((image, idx) => (
                           <button
                             key={image.id}
                             onClick={() => openModal(surffimages, idx)}
-                            className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
+                            className="relative w-16 h-16 border border-gray-200 rounded hover:border-gray-300 transition-colors"
                           >
                             <img
                               src={image.src}
@@ -318,8 +318,8 @@ export default function Home() {
               </div>
 
               {/* Uptempo Global */}
-              <div className="flex gap-6">
-                <div className="shrink-0 w-20">
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-6">
+                <div className="shrink-0 sm:w-20">
                   <span className="text-gray-500 text-sm whitespace-nowrap">
                     2022
                   </span>
@@ -376,12 +376,12 @@ export default function Home() {
                       <p className="mb-2 text-sm font-medium">
                         Project Gallery:
                       </p>
-                      <div className="flex gap-2">
+                      <div className="flex flex-wrap gap-2">
                         {uptempoimages.map((image, idx) => (
                           <button
                             key={image.id}
                             onClick={() => openModal(uptempoimages, idx)}
-                            className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
+                            className="relative w-16 h-16 border border-gray-200 rounded hover:border-gray-300 transition-colors"
                           >
                             <img
                               src={image.src}
@@ -397,8 +397,8 @@ export default function Home() {
               </div>
 
               {/* Community STEM Instructor */}
-              <div className="flex gap-6">
-                <div className="shrink-0 w-20">
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-6">
+                <div className="shrink-0 sm:w-20">
                   <span className="text-gray-500 text-sm whitespace-nowrap">
                     2016
                   </span>
@@ -439,8 +439,8 @@ export default function Home() {
           <section className="mb-12">
             <h3 className="text-lg font-medium mb-6">Projects</h3>
             <div className="space-y-8">
-              <div className="flex gap-6">
-                <div className="shrink-0 w-20">
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-6">
+                <div className="shrink-0 sm:w-20">
                   <span className="text-gray-500 text-sm whitespace-nowrap">
                     Present
                   </span>
@@ -501,12 +501,12 @@ export default function Home() {
                       <p className="mb-2 text-sm font-medium">
                         Project Gallery:
                       </p>
-                      <div className="flex gap-2">
+                      <div className="flex flex-wrap gap-2">
                         {oxinioimages.map((image, idx) => (
                           <button
                             key={image.id}
                             onClick={() => openModal(oxinioimages, idx)}
-                            className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
+                            className="relative w-16 h-16 border border-gray-200 rounded hover:border-gray-300 transition-colors"
                           >
                             <img
                               src={image.src}
@@ -521,8 +521,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex gap-6">
-                <div className="shrink-0 w-20">
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-6">
+                <div className="shrink-0 sm:w-20">
                   <span className="text-gray-500 text-sm whitespace-nowrap">
                     Present
                   </span>
@@ -588,12 +588,12 @@ export default function Home() {
                       <p className="mb-2 text-sm font-medium">
                         Project Gallery:
                       </p>
-                      <div className="flex gap-2">
+                      <div className="flex flex-wrap gap-2">
                         {financeimages.map((image, idx) => (
                           <button
                             key={image.id}
                             onClick={() => openModal(financeimages, idx)}
-                            className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
+                            className="relative w-16 h-16 border border-gray-200 rounded hover:border-gray-300 transition-colors"
                           >
                             <img
                               src={image.src}
@@ -608,8 +608,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex gap-6">
-                <div className="shrink-0 w-20">
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-6">
+                <div className="shrink-0 sm:w-20">
                   <span className="text-gray-500 text-sm whitespace-nowrap">
                     Present
                   </span>
@@ -665,12 +665,12 @@ export default function Home() {
                       <p className="mb-2 text-sm font-medium">
                         Project Gallery:
                       </p>
-                      <div className="flex gap-2">
+                      <div className="flex flex-wrap gap-2">
                         {ofbimages.map((image, idx) => (
                           <button
                             key={image.id}
                             onClick={() => openModal(ofbimages, idx)}
-                            className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
+                            className="relative w-16 h-16 border border-gray-200 rounded hover:border-gray-300 transition-colors"
                           >
                             <img
                               src={image.src}
@@ -685,8 +685,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex gap-6">
-                <div className="shrink-0 w-20">
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-6">
+                <div className="shrink-0 sm:w-20">
                   <span className="text-gray-500 text-sm whitespace-nowrap">
                     Present
                   </span>
@@ -742,12 +742,12 @@ export default function Home() {
                       <p className="mb-2 text-sm font-medium">
                         Project Gallery:
                       </p>
-                      <div className="flex gap-2">
+                      <div className="flex flex-wrap gap-2">
                         {jobangnakjiimages.map((image, idx) => (
                           <button
                             key={image.id}
                             onClick={() => openModal(jobangnakjiimages, idx)}
-                            className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
+                            className="relative w-16 h-16 border border-gray-200 rounded hover:border-gray-300 transition-colors"
                           >
                             <img
                               src={image.src}
@@ -762,8 +762,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex gap-6">
-                <div className="shrink-0 w-20">
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-6">
+                <div className="shrink-0 sm:w-20">
                   <span className="text-gray-500 text-sm whitespace-nowrap">
                     Present
                   </span>
@@ -822,14 +822,14 @@ export default function Home() {
                       <p className="mb-2 text-sm font-medium">
                         Project Gallery:
                       </p>
-                      <div className="flex gap-2">
+                      <div className="flex flex-wrap gap-2">
                         {supabasemarkdownimages.map((image, idx) => (
                           <button
                             key={image.id}
                             onClick={() =>
                               openModal(supabasemarkdownimages, idx)
                             }
-                            className="relative w-16 h-16 border border-gray-200 rounded overflow-hidden hover:border-gray-300 transition-colors"
+                            className="relative w-16 h-16 border border-gray-200 rounded hover:border-gray-300 transition-colors"
                           >
                             <img
                               src={image.src}
@@ -850,8 +850,8 @@ export default function Home() {
           <section className="mb-12">
             <h3 className="text-lg font-medium mb-6">Education</h3>
             <div className="space-y-8">
-              <div className="flex gap-6">
-                <div className="shrink-0 w-20">
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-6">
+                <div className="shrink-0 sm:w-20">
                   <span className="text-gray-500 text-sm whitespace-nowrap">
                     2015 — 2018
                   </span>
