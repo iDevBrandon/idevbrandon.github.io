@@ -558,37 +558,29 @@ export default function Home() {
 
                     <ul className="space-y-1 list-disc list-inside">
                       <li>
-                        Built interactive financial dashboards to visualize
-                        market data, portfolio performance, and investment
-                        insights
+                        Built <strong>Autopilot</strong>, a workflow engine that
+                        orchestrates market data, stock fundamentals, and
+                        portfolio analysis into systematic investment
                       </li>
-                      <li>
-                        Developed automated data pipelines to collect and
-                        process financial market data using Supabase and
-                        scheduled workflows
-                      </li>
-                      <li>
-                        Enhanced user experience through goal-based financial
-                        planning tools and intuitive portfolio tracking
-                        interfaces
-                      </li>
-                      <li>
-                        Built &quot;Autopilot&quot;, an automated workflow that
-                        analyzes market conditions, stock fundamentals, and
-                        portfolio data to generate systematic investment
-                        recommendations
-                      </li>
+
                       <li>
                         Developed a Retrieval-Augmented Generation (RAG) system
                         using investment research documents to provide
                         contextual stock analysis and Q&amp;A
                       </li>
+
+                      <li>
+                        Implemented an <strong>Adapter Pattern</strong> to
+                        abstract country-specific brokerage APIs (e.g., Alpaca,
+                        Toss Securities), providing a consistent interface for
+                        portfolio synchronization and order execution
+                      </li>
                     </ul>
 
                     <p className="mt-2">
                       <strong>Technologies:</strong> Next.js 15, React,
-                      TypeScript, Supabase, FastAPI, TailwindCSS, React Query,
-                      Vercel AI SDK
+                      TypeScript, Supabase, FastAPI, React Query, Tailwind CSS,
+                      Cloudflare Workers, Cloudflare Vectorize, Vercel AI SDK
                     </p>
 
                     {/* Image Gallery */}
