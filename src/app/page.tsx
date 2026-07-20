@@ -583,10 +583,6 @@ export default function Home() {
                         using investment research documents to provide
                         contextual stock analysis and Q&amp;A
                       </li>
-                      <li>
-                        Designed reusable frontend components and scalable
-                        application architecture using modern React patterns
-                      </li>
                     </ul>
 
                     <p className="mt-2">
